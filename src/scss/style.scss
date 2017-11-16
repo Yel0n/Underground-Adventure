@@ -1,0 +1,53 @@
+*{
+  color: white;
+  font-family: Ubuntu;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: black;
+}
+
+.game{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .board{
+    height: 640px;
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+    div{
+      height: 32px;
+      width: 32px;
+    }
+    div.floor{
+      background-image: url('./../../images/dungeon/floor/pebble.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    div.wall{
+      background-image: url('./../../images/dungeon/wall/brick.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.8;
+      z-index: 2;
+    }
+  }
+}
+
+.player{
+  height: 32px;
+  width: 32px;
+  background-image: url('./../../images/player/human.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
