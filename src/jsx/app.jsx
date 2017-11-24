@@ -12,29 +12,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 x: 32,
             };
         }
-        handleKeyPress = (e) => {
-            console.log(e);
-            if(e.charCode == 87) {
-                this.setState({
-                    y: this.state.y-32
-                });
-            }
-            if(e.charCode == 68){
-                this.setState({
-                    x: this.state.x+32
-                });
-            }
-            if(e.charCode == 65){
-                this.setState({
-                    x: this.state.x-32
-                });
-            }
-            if(e.charCode == 83){
-                this.setState({
-                    y: this.state.y+32
-                });
-            }
-        };
         render(){
             let style = {
                 position: 'absolute',
@@ -43,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
             };
 
             return (
-                <div style={style} onKeyDown={this.handleKeyPress} className='player'></div>
+                <div style={style} className='player'></div>
             );
         }
     }
